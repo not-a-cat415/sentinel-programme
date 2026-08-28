@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <input id="input" placeholder="Enter password here"></input>
+    <button id="hash">Hash</button>
+    <p id="text"></p>
+  </body>
+  <script type="module">
+    async function sha256(message) {
+      const msgBuffer = new TextEncoder().encode(message);                    
+
+      const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+
+      const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+      
+      return hashHex;
+      }
+
+    const inputField = document.getElementById("input")
+    const hashButton = document.getElementById("hash")
+    const textParagraph = document.getElementById("text")
+    
+    async function hashButtonOnclick(event) {
+      textParagraph.innerHTML = sha256(inputField.value)
+    }
+    hashButton.addEventListener("click", hashButtonOnclick)
+  </script>
+</html>
