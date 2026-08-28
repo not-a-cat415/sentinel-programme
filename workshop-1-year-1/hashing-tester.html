@@ -23,7 +23,7 @@
     const textParagraph = document.getElementById("text")
     
     async function hashButtonOnclick(event) {
-      textParagraph.innerHTML = sha256(inputField.value)
+      textParagraph.innerHTML = await sha256(inputField.value)
     }
     hashButton.addEventListener("click", hashButtonOnclick)
   </script>
