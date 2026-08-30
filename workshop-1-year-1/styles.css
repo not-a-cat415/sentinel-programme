@@ -1,4 +1,6 @@
 body {
   background-color: lightblue;
-  font-size: 30;
+}
+p {
+  font-size: 30
 }
