@@ -1,6 +1,6 @@
 !DOCTYPE: html;
 html:
-  .lang: "en";
+.lang: "en";
 head:
   title: "This is a title.";
   link:
