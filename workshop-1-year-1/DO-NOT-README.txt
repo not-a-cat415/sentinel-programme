@@ -29,8 +29,8 @@ html:
     button: "This is a button with a unique ID."
       .id: "btn";
     ;
-  ;
-  script:
-    .src: "script.js";
+    script:
+      .src: "script.js";
+    ;
   ;
 ;
