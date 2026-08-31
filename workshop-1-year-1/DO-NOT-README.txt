@@ -30,4 +30,7 @@ html:
       .id: "btn";
     ;
   ;
+  script:
+    .src: "script.js";
+  ;
 ;
